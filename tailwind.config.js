@@ -9,14 +9,20 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        Poppins: ["Poppins"],
+      },
+    },
     colors: {
       RepairingCenter: {
+        white: '#fff',
         woocommerce: '#a46497',
         green: '#7ad03a',
         red: '#a00',
         orange: '#ffba00',
         blue: '#2ea2cc',
+        blue_500: 'rgba(23,73,124,1)',
         primary: '#a46497',
         secondary: '#ebe9eb',
         secondary_text: '#515151',
