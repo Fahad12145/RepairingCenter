@@ -3,8 +3,8 @@ import React from "react";
 // eslint-disable-next-line react/display-name
 const About = React.forwardRef<HTMLDivElement>((_props, ref) => {
   return (
-    <div ref={ref} className="flex justify-center py-20 max-sm:px-5">
-      <div>
+    <div ref={ref} className="flex justify-center pt-20 max-sm:px-5">
+      <div className="max-w-screen-md">
         <h1
           lang="en"
           className="flex justify-center w-16 py-2 mx-auto my-2 text-2xl font-medium text-center border-b-4 border-b-RepairingCenter-blue_500 "

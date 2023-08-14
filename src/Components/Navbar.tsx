@@ -1,15 +1,18 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useRef, useEffect } from "react";
 import { IoMdClose } from "react-icons/io";
 import { MdCancel, MdViewHeadline } from "react-icons/md";
 
 interface NavbarProps {
+  homeRef: React.RefObject<HTMLDivElement>;
   aboutRef: React.RefObject<HTMLDivElement>;
   servicesRef: React.RefObject<HTMLDivElement>;
   contactRef: React.RefObject<HTMLDivElement>;
 }
 const Navbar: React.FC<NavbarProps> = ({
+  homeRef,
   aboutRef,
   servicesRef,
   contactRef,
@@ -28,6 +31,7 @@ const Navbar: React.FC<NavbarProps> = ({
   const Tabs = [
     {
       text: "Home",
+      onClick: () => scrollToRef(homeRef),
     },
     {
       text: "Services",
@@ -35,7 +39,7 @@ const Navbar: React.FC<NavbarProps> = ({
     },
     {
       text: "Contact Us",
-      // textAr: "اتصل بنا",
+
       onClick: () => scrollToRef(contactRef),
     },
     {
@@ -59,61 +63,61 @@ const Navbar: React.FC<NavbarProps> = ({
   }, []);
   return (
     <div className="flex justify-center w-full py-3 my-2">
-      <ul
-        className={`fixed flex justify-center py-5 bg-RepairingCenter-white top-0 z-50 w-full max-md:hidden  space-x-5   ${
+      <div
+        className={`fixed flex justify-center py-5 bg-RepairingCenter-white top-0 z-50 w-full max-md:hidden space-x-5 ${
           scroll
             ? "shadow-lg bg-RepairingCenter-white bg-opacity-95"
             : "bg-transparent mx-auto max-md:bg-opacity-50 "
         }   `}
       >
+        <Image src="/Images/Logo.png" width={50} height={50} alt="logo" />
         {Tabs.map((tab, index) => (
           <>
-            <Link
+            <button
               lang="en"
-              href="#"
               onClick={tab.onClick}
               className="py-2 font-semibold hover:border-b-2 active:border-RepairingCenter-blue hover:text-RepairingCenter-blue"
               key={index}
             >
               {tab.text}
-            </Link>
+            </button>
           </>
         ))}
-      </ul>
+      </div>
       <div
-        className={`fixed top-0 py-5 flex items-center w-full justify-end bg-RepairingCenter-white px-5 ml-auto md:hidden ${
+        className={`fixed top-0 py-5 flex items-center w-full justify-between bg-RepairingCenter-white px-5 ml-auto md:hidden ${
           scroll
-            ? "shadow-lg bg-white bg-opacity-95"
-            : "bg-transparent md:bg-opacity-50 "
+            ? "shadow-lg bg-RepairingCenter-blue_500 "
+            : "bg-transparent  "
         }  `}
       >
+        <Image src="/Images/Logo.png" width={50} height={50} alt="logo" />
         <div className="relative flex items-center">
-        <p className="text-sm">Menu</p>
-        {dropdown ? (
-          <IoMdClose onClick={() => setDropdown(!dropdown)} size={30} />
-        ) : (
-          <MdViewHeadline onClick={() => setDropdown(!dropdown)} size={30} />
-        )}
-      </div>
-      <ul
-        className={`absolute flex items-center md:hidden right-5 top-12 bg-RepairingCenter-blue_500 bg-opacity-10 text-RepairingCenter-white w-40 flex-col justify-center ${
-          dropdown ? "block" : "hidden"
-        }`}
-      >
-        {Tabs.map((tab, index) => (
-          <>
-            <Link
-              lang="en"
-              href="#"
-              onClick={tab.onClick}
-              className="py-2 font-semibold hover:border-b-2 active:border-RepairingCenter-blue hover:text-RepairingCenter-blue"
-              key={index}
-            >
-              {tab.text}
-            </Link>
-          </>
-        ))}
-      </ul>
+          <p className="text-sm">Menu</p>
+          {dropdown ? (
+            <IoMdClose onClick={() => setDropdown(!dropdown)} size={30} />
+          ) : (
+            <MdViewHeadline onClick={() => setDropdown(!dropdown)} size={30} />
+          )}
+        </div>
+        <ul
+          className={`absolute flex items-center md:hidden right-5 top-12 bg-RepairingCenter-blue_500  text-RepairingCenter-white w-40 flex-col justify-center ${
+            dropdown ? "block" : "hidden"
+          }`}
+        >
+          {Tabs.map((tab, index) => (
+            <>
+              <button
+                lang="en"
+                onClick={tab.onClick}
+                className="py-2 font-semibold hover:border-b-2 active:border-RepairingCenter-blue hover:text-RepairingCenter-blue"
+                key={index}
+              >
+                {tab.text}
+              </button>
+            </>
+          ))}
+        </ul>
       </div>
     </div>
   );

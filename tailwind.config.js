@@ -13,6 +13,9 @@ module.exports = {
       fontFamily: {
         Poppins: ["Poppins"],
       },
+      screens:{
+        largeTablet:'840px'
+      }
     },
     colors: {
       RepairingCenter: {
@@ -22,7 +25,7 @@ module.exports = {
         red: '#a00',
         orange: '#ffba00',
         blue: '#2ea2cc',
-        blue_500: 'rgba(23,73,124,1)',
+        blue_500: '#17497C',
         primary: '#a46497',
         secondary: '#ebe9eb',
         secondary_text: '#515151',

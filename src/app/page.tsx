@@ -8,19 +8,27 @@ import Liscense from "@/Components/Liscense";
 import Navbar from "@/Components/Navbar";
 import Services from "@/Components/Services";
 import Contact from "@/Components/Footer";
+import Testimonial from "@/Components/Testimonial";
 
 export default function Home() {
+  const homeRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const servicesRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
   return (
     <main lang="ar">
-      {/* <Callus /> */}
-      <Navbar aboutRef={aboutRef} servicesRef={servicesRef}  contactRef={contactRef}/>
-      <Hero />
+      <Navbar
+        aboutRef={aboutRef}
+        servicesRef={servicesRef}
+        contactRef={contactRef}
+        homeRef={homeRef}
+      />
+      <Hero ref={homeRef} />
+      <Callus />
       <About ref={aboutRef} />
       <Services ref={servicesRef} />
       <Gallery />
+      <Testimonial />
       <Contact ref={contactRef} />
       <Liscense />
     </main>
