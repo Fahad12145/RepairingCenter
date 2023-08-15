@@ -62,15 +62,15 @@ const Navbar: React.FC<NavbarProps> = ({
     };
   }, []);
   return (
-    <div className="flex justify-center w-full py-3 my-2">
+    <div className="flex justify-center w-full my-2">
       <div
-        className={`fixed flex justify-center py-5 bg-RepairingCenter-white top-0 z-50 w-full max-md:hidden space-x-5 ${
+        className={`fixed flex justify-center py-2 bg-RepairingCenter-white top-0 z-50 w-full max-md:hidden space-x-5 ${
           scroll
             ? "shadow-lg bg-RepairingCenter-white bg-opacity-95"
             : "bg-transparent mx-auto max-md:bg-opacity-50 "
         }   `}
       >
-        <Image src="/Images/Logo.png" width={50} height={50} alt="logo" />
+        <Image src="/Images/Logo.png" width={70} height={70} alt="logo" />
         {Tabs.map((tab, index) => (
           <>
             <button
@@ -91,7 +91,7 @@ const Navbar: React.FC<NavbarProps> = ({
             : "bg-transparent  "
         }  `}
       >
-        <Image src="/Images/Logo.png" width={50} height={50} alt="logo" />
+        <Image src="/Images/Logo.png" width={60} height={60} alt="logo" />
         <div className="relative flex items-center">
           <p className="text-sm">Menu</p>
           {dropdown ? (

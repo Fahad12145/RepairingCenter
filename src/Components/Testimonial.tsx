@@ -38,7 +38,7 @@ const Testimonial = () => {
           Read All Reviews
         </button>
       </div>
-      <div className="flex space-x-5 overflow-x-auto w-96 max-sm:px-5 ">
+      <div className="flex space-x-5 overflow-x-auto w-96 max-sm:w-80 max-sm:mx-5 ">
         {Reviews.map((review, index) => {
           return (
             <div

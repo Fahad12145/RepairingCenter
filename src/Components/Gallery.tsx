@@ -19,7 +19,7 @@ const Gallery = () => {
       image: "/Images/repairingstove.jpg",
     },
     {
-      image: "/Images/Washingmachine.jpeg",
+      image: "/Images/machine.jpg",
     },
   ];
   return (
@@ -33,7 +33,7 @@ const Gallery = () => {
             return (
               <div key={index}>
                 <Image
-                  className="max-h-[300px]"
+                  className=""
                   loading="lazy"
                   src={image.image}
                   width={350}
