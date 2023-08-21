@@ -44,9 +44,7 @@ const News = () => {
               })}
             </div>
 
-            <p>
-              <span className="font-semibold text-center">Good News !</span>
-              <br />
+            <p className="text-base hover:font-semibold">
               We engage in the buying and selling of spare parts for household
               appliances.{" "}
             </p>

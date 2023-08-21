@@ -25,7 +25,7 @@ const Hero = React.forwardRef<HTMLDivElement>((_props, ref) => {
           <h3 className="text-lg text-center">Repairing Services</h3>
         </div>
         <Image
-          src="/Images/Appliances.png "
+          src="/Appliances.png "
           width={450}
           height={400}
           alt="Appliances"

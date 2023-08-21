@@ -9,18 +9,18 @@ const Testimonial = () => {
     },
     {
       review:
-        " I hold great admiration for their work. Their team consists of extremely experienced and collaborative staff who operate effectively, delivering results promptly. I strongly recommend their services.",
-      name: "Fahad Ali",
+        " I have deep respect for their accomplishments. Their team is composed of highly skilled and cooperative professionals who work efficiently, achieving outcomes promptly. I wholeheartedly endorse their services.",
+      name: "Usman ",
     },
     {
       review:
-        " I hold great admiration for their work. Their team consists of extremely experienced and collaborative staff who operate effectively, delivering results promptly. I strongly recommend their services.",
-      name: "Fahad Ali",
+        " I have immense respect for their efforts. Their team comprises remarkably seasoned and cooperative personnel who function with effectiveness, ensuring prompt delivery of outcomes. I wholeheartedly endorse availing their services.",
+      name: "Abbas khan",
     },
     {
       review:
-        " I hold great admiration for their work. Their team consists of extremely experienced and collaborative staff who operate effectively, delivering results promptly. I strongly recommend their services.",
-      name: "Fahad Ali",
+        " I possess a profound appreciation for their accomplishments. Their team is composed of highly experienced and collaborative professionals who function with exceptional efficiency, yielding prompt results. I wholeheartedly endorse their services.",
+      name: "Waqas Ahmed",
     },
   ];
   return (
