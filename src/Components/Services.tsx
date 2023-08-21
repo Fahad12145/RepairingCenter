@@ -12,11 +12,11 @@ const Services = React.forwardRef<HTMLDivElement>((_props, ref) => {
       alt: "washingmachine",
     },
     {
-      image: "/Images/washingMachine.png",
-      heading: "Refregirator Repair",
+      image: "/Images/Ac.png",
+      heading: "Air Contioner Repair",
       details:
         "Our team consists of committed and skilled trainers who tirelessly operate around the clock to mend your household appliances.",
-      alt: "refrigerator",
+      alt: "AC",
     },
     {
       image: "/Images/Microwave.png",
@@ -26,11 +26,11 @@ const Services = React.forwardRef<HTMLDivElement>((_props, ref) => {
       alt: "microwave",
     },
     {
-      image: "/Images/TV.png",
-      heading: "TV Repair",
+      image: "/Images/washingMachine.png",
+      heading: "Automatic Washing Machine",
       details:
         "Our team consists of committed and skilled trainers who tirelessly operate around the clock to mend your household appliances.",
-      alt: "TV",
+      alt: "refrigerator",
     },
     {
       image: "/Images/CoffeeMaker.png",
@@ -70,7 +70,9 @@ const Services = React.forwardRef<HTMLDivElement>((_props, ref) => {
                   />
                 </div>
                 <div className="max-w-xs">
-                  <h2 className="text-base font-medium hover:text-lg">{service.heading}</h2>
+                  <h2 className="text-base font-medium hover:text-lg">
+                    {service.heading}
+                  </h2>
                   <p className="w-64 text-xs opacity-70">{service.details}</p>
                 </div>
               </div>

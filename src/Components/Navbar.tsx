@@ -3,7 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useRef, useEffect } from "react";
 import { IoMdClose } from "react-icons/io";
-import { MdCancel, MdViewHeadline } from "react-icons/md";
+import { BiGlobe } from "react-icons/bi";
+import { MdViewHeadline } from "react-icons/md";
 
 interface NavbarProps {
   homeRef: React.RefObject<HTMLDivElement>;
@@ -19,6 +20,7 @@ const Navbar: React.FC<NavbarProps> = ({
 }) => {
   const [dropdown, setDropdown] = useState(false);
   const [scroll, setScroll] = useState(false);
+  const [language, setLanguage] = useState("english");
 
   const scrollToRef = (ref: any) => {
     ref.current.scrollIntoView({
@@ -61,6 +63,9 @@ const Navbar: React.FC<NavbarProps> = ({
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  const handleLanguageChange = (event: any) => {
+    setLanguage(event.target.value);
+  };
   return (
     <div className="flex justify-center w-full my-2">
       <div
@@ -76,13 +81,26 @@ const Navbar: React.FC<NavbarProps> = ({
             <button
               lang="en"
               onClick={tab.onClick}
-              className="py-2 font-semibold hover:border-b-2 active:border-RepairingCenter-blue hover:text-RepairingCenter-blue"
+              className="py-2 font-medium hover:border-b-2 active:border-RepairingCenter-blue hover:text-RepairingCenter-blue"
               key={index}
             >
               {tab.text}
             </button>
           </>
         ))}
+        <div className="flex items-center px-3 space-x-2 border ">
+          <BiGlobe size={30} />
+          <select
+            className="border-none outline-none cursor-pointer bg-RepairingCenter-white"
+            value={language}
+            onChange={handleLanguageChange}
+          >
+            <option className="px-2 bg-none" value="english">
+              English
+            </option>
+            <option value="arabic">Arabic</option>
+          </select>
+        </div>
       </div>
       <div
         className={`fixed top-0 py-3 flex items-center w-full justify-between bg-RepairingCenter-white px-5 ml-auto md:hidden ${
@@ -90,7 +108,7 @@ const Navbar: React.FC<NavbarProps> = ({
         }  `}
       >
         <Image src="/Images/Logo.png" width={60} height={60} alt="logo" />
-        <div className="relative flex items-center">
+        <div className="relative flex items-center cursor-pointer">
           <p className="text-sm">Menu</p>
           {dropdown ? (
             <IoMdClose onClick={() => setDropdown(!dropdown)} size={30} />
@@ -115,6 +133,27 @@ const Navbar: React.FC<NavbarProps> = ({
               </button>
             </>
           ))}
+          <div className="flex items-center px-3 space-x-2 border-none ">
+            <BiGlobe size={30} />
+            <select
+              className="border-black outline-none cursor-pointer bg-RepairingCenter-blue_500 text bg-none"
+              value={language}
+              onChange={handleLanguageChange}
+            >
+              <option
+                className="cursor-pointer bg-RepairingCenter-blue_500"
+                value="english"
+              >
+                English
+              </option>
+              <option
+                className="cursor-pointer bg-RepairingCenter-blue_500"
+                value="arabic"
+              >
+                Arabic
+              </option>
+            </select>
+          </div>
         </ul>
       </div>
     </div>

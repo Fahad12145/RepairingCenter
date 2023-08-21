@@ -13,10 +13,10 @@ const Gallery = () => {
       image: "/Images/stove.jpg",
     },
     {
-      image: "/Images/gas.jpg",
+      image: "/Images/repairingstove.jpg",
     },
     {
-      image: "/Images/repairingstove.jpg",
+      image: "/Images/Electricstove.jpg",
     },
     {
       image: "/Images/machine.jpg",
@@ -31,16 +31,15 @@ const Gallery = () => {
         <div className="grid justify-center grid-cols-3 gap-10 max-md:grid-cols-2 max-sm:grid-cols-1 justify-items-center">
           {Images.map((image, index) => {
             return (
-              <div key={index}>
-                <Image
-                  className=""
-                  loading="lazy"
-                  src={image.image}
-                  width={350}
-                  height={300}
-                  alt="GalleryImages"
-                />
-              </div>
+              <Image
+                key={index}
+                className="shadow-2xl "
+                loading="lazy"
+                src={image.image}
+                width={300}
+                height={0}
+                alt="GalleryImages"
+              />
             );
           })}
         </div>
