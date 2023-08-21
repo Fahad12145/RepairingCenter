@@ -9,6 +9,7 @@ import Navbar from "@/Components/Navbar";
 import Services from "@/Components/Services";
 import Contact from "@/Components/Footer";
 import Testimonial from "@/Components/Testimonial";
+import News from "@/Components/News";
 
 export default function Home() {
   const homeRef = useRef<HTMLDivElement>(null);
@@ -16,7 +17,7 @@ export default function Home() {
   const servicesRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
   return (
-    <main lang="ar">
+    <main lang="en">
       <Navbar
         aboutRef={aboutRef}
         servicesRef={servicesRef}
@@ -28,6 +29,7 @@ export default function Home() {
       <About ref={aboutRef} />
       <Services ref={servicesRef} />
       <Gallery />
+      <News />
       <Testimonial />
       <Contact ref={contactRef} />
       <Liscense />

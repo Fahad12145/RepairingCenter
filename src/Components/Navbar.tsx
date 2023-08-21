@@ -70,7 +70,7 @@ const Navbar: React.FC<NavbarProps> = ({
             : "bg-transparent mx-auto max-md:bg-opacity-50 "
         }   `}
       >
-        <Image src="/Images/Logo.png" width={70} height={70} alt="logo" />
+        <Image src="/Images/Logo.png" width={60} height={60} alt="logo" />
         {Tabs.map((tab, index) => (
           <>
             <button
@@ -85,10 +85,8 @@ const Navbar: React.FC<NavbarProps> = ({
         ))}
       </div>
       <div
-        className={`fixed top-0 py-5 flex items-center w-full justify-between bg-RepairingCenter-white px-5 ml-auto md:hidden ${
-          scroll
-            ? "shadow-lg bg-RepairingCenter-blue_500 "
-            : "bg-transparent  "
+        className={`fixed top-0 py-3 flex items-center w-full justify-between bg-RepairingCenter-white px-5 ml-auto md:hidden ${
+          scroll ? "shadow-lg bg-RepairingCenter-blue_500 " : "bg-transparent  "
         }  `}
       >
         <Image src="/Images/Logo.png" width={60} height={60} alt="logo" />
@@ -101,7 +99,7 @@ const Navbar: React.FC<NavbarProps> = ({
           )}
         </div>
         <ul
-          className={`absolute flex items-center md:hidden right-5 top-12 bg-RepairingCenter-blue_500  text-RepairingCenter-white w-40 flex-col justify-center ${
+          className={`absolute flex items-center md:hidden right-5 top-16 rounded-xl bg-RepairingCenter-blue_500  text-RepairingCenter-white w-40 flex-col justify-center ${
             dropdown ? "block" : "hidden"
           }`}
         >
