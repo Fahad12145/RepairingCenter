@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Testimonial = () => {
   const Reviews = [
@@ -34,9 +35,15 @@ const Testimonial = () => {
           Our team comprises skilled professionals who are dedicated to serving
           you and your electronic devices with their expertise and experience.
         </p>
-        <button className="p-3 mt-5 bg-RepairingCenter-blue_500 text-RepairingCenter-white">
-          Read All Reviews
-        </button>
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 1.01 }}
+          transition={{ type: "spring", stiffness: 400, damping: 17 }}
+        >
+          <button className="p-3 mt-5 bg-RepairingCenter-blue_500 text-RepairingCenter-white">
+            Read All Reviews
+          </button>
+        </motion.div>
       </div>
       <div className="flex space-x-5 overflow-x-auto w-96 max-sm:w-80 max-sm:mx-5 ">
         {Reviews.map((review, index) => {
@@ -63,10 +70,16 @@ const Testimonial = () => {
               </svg>
               <p className="mt-3 text-sm font-medium text-RepairingCenter-blue_500">
                 {review.review}
-              </p>
-              <span className="flex mt-5 text-xl font-semibold text-RepairingCenter-blue_500 ">
-                {review.name}
-              </span>
+              </p>{" "}
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 1.01 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              >
+                <span className="flex mt-5 text-xl font-semibold text-RepairingCenter-blue_500 ">
+                  {review.name}
+                </span>
+              </motion.div>
             </div>
           );
         })}

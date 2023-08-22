@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 // eslint-disable-next-line react/display-name
 const News = () => {
@@ -28,21 +29,32 @@ const News = () => {
         </h1>
         <div lang="en" className="text-center ">
           <div className="flex flex-row items-center justify-between gap-10 mt-10 max-md:flex-col-reverse">
-            <div className="grid justify-center grid-cols-3 gap-5 max-md:grid-cols-2 justify-items-center">
+            <motion.div
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.8 }}
+              className="grid justify-center grid-cols-3 gap-5 max-md:grid-cols-2 justify-items-center"
+            >
               {Images.map((image, index) => {
                 return (
-                  <Image
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 1.01 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
                     key={index}
-                    className="shadow-2xl "
-                    loading="lazy"
-                    src={image.image}
-                    width={200}
-                    height={0}
-                    alt="GalleryImages"
-                  />
+                  >
+                    <Image
+                      className="shadow-2xl "
+                      loading="lazy"
+                      src={image.image}
+                      width={200}
+                      height={0}
+                      alt="GalleryImages"
+                    />
+                  </motion.div>
                 );
               })}
-            </div>
+            </motion.div>
 
             <p className="text-base hover:font-semibold">
               We engage in the buying and selling of spare parts for household

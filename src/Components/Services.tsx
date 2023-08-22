@@ -1,5 +1,6 @@
 import Image from "next/image";
-import React, { forwardRef } from "react";
+import React from "react";
+import { motion } from "framer-motion";
 
 // eslint-disable-next-line react/display-name
 const Services = React.forwardRef<HTMLDivElement>((_props, ref) => {
@@ -57,12 +58,16 @@ const Services = React.forwardRef<HTMLDivElement>((_props, ref) => {
           <div className="" />
           <div className="grid items-start grid-cols-2 gap-10 mt-10 sm:gap-5 justify-items-center max-lg:grid-cols-2 max-md:grid-cols-1 ">
             {Services.map((service, index) => (
-              <div
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 1.01 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 key={index}
                 className="flex items-start justify-center gap-2"
               >
                 <div>
                   <Image
+                    loading="lazy"
                     src={service.image}
                     width={50}
                     height={50}
@@ -75,7 +80,7 @@ const Services = React.forwardRef<HTMLDivElement>((_props, ref) => {
                   </h2>
                   <p className="w-64 text-xs opacity-70">{service.details}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

@@ -75,7 +75,10 @@ const Navbar: React.FC<NavbarProps> = ({
             : "bg-transparent mx-auto max-md:bg-opacity-50 "
         }   `}
       >
-        <Image src="/Images/Logo.png" width={60} height={60} alt="logo" />
+        <Link href="/">
+          <Image src="/Images/Logo.png" width={60} height={60} alt="logo" />
+        </Link>
+
         {Tabs.map((tab, index) => (
           <>
             <button
@@ -107,7 +110,9 @@ const Navbar: React.FC<NavbarProps> = ({
           scroll ? "shadow-lg bg-RepairingCenter-blue_500 " : "bg-transparent  "
         }  `}
       >
-        <Image src="/Images/Logo.png" width={60} height={60} alt="logo" />
+        <Link href="/">
+          <Image src="/Images/Logo.png" width={60} height={60} alt="logo" />
+        </Link>
         <div className="relative flex items-center cursor-pointer">
           <p className="text-sm">Menu</p>
           {dropdown ? (
