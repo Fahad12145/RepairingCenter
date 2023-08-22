@@ -46,7 +46,7 @@ const Hero = React.forwardRef<HTMLDivElement>((_props, ref) => {
           className="flex items-center"
         >
           <Image
-            src="/Appliances.png "
+            src="/CoffeeMaker.png "
             loading="eager"
             width={450}
             height={400}
