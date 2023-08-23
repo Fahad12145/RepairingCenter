@@ -75,7 +75,7 @@ const Services = React.forwardRef<HTMLDivElement>((_props, ref) => {
                   />
                 </div>
                 <div className="max-w-xs">
-                  <h2 className="text-base font-medium hover:text-lg">
+                  <h2 className="text-base font-medium">
                     {service.heading}
                   </h2>
                   <p className="w-64 text-xs opacity-70">{service.details}</p>

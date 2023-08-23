@@ -106,7 +106,7 @@ const Navbar: React.FC<NavbarProps> = ({
         </div>
       </div>
       <div
-        className={`fixed top-0 py-3 flex items-center w-full justify-between bg-RepairingCenter-white px-5 ml-auto md:hidden ${
+        className={`fixed top-0 py-3 flex items-center w-full justify-between bg-RepairingCenter-white   md:hidden ${
           scroll ? "shadow-lg bg-RepairingCenter-blue_500 " : "bg-transparent  "
         }  `}
       >
@@ -122,7 +122,7 @@ const Navbar: React.FC<NavbarProps> = ({
           )}
         </div>
         <ul
-          className={`absolute flex items-center md:hidden right-5 top-16 rounded-xl bg-RepairingCenter-blue_500  text-RepairingCenter-white w-40 flex-col justify-center ${
+          className={`absolute flex items-center md:hidden right-3 top-16 rounded-xl bg-RepairingCenter-blue_500  text-RepairingCenter-white w-40 flex-col justify-center ${
             dropdown ? "block" : "hidden"
           }`}
         >
