@@ -30,7 +30,7 @@ export default function Home() {
       <Services ref={servicesRef} />
       <Gallery />
       <News />
-      {/* <Testimonial /> */}
+      <Testimonial />
       <Contact ref={contactRef} />
       <Liscense />
     </main>

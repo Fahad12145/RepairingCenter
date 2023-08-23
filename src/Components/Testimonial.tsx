@@ -45,12 +45,12 @@ const Testimonial = () => {
           </button>
         </motion.div>
       </div>
-      <div className="flex space-x-5 overflow-x-auto w-96 max-sm:w-80 max-sm:mx-5 ">
+      <div className="flex space-x-5 overflow-x-auto w-80 max-sm:w-80 ">
         {Reviews.map((review, index) => {
           return (
             <div
               key={index}
-              className="min-w-fit p-5 overflow-hidden bg-[#EEFAFF]"
+              className="min-w-full p-5 overflow-hidden bg-[#EEFAFF]"
             >
               <svg
                 width="40"
