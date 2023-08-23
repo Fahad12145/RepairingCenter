@@ -94,7 +94,7 @@ const Navbar: React.FC<NavbarProps> = ({
         <div className="flex items-center px-3 space-x-2 border ">
           <BiGlobe size={30} />
           <select
-            className="border-none outline-none cursor-pointer bg-RepairingCenter-white"
+            className="bg-transparent border-none outline-none cursor-pointer"
             value={language}
             onChange={handleLanguageChange}
           >
@@ -106,7 +106,7 @@ const Navbar: React.FC<NavbarProps> = ({
         </div>
       </div>
       <div
-        className={`fixed top-0 py-3 flex items-center w-full justify-between bg-RepairingCenter-white   md:hidden ${
+        className={`fixed top-0 py-3 flex items-center w-full px-5 justify-between bg-RepairingCenter-white   md:hidden ${
           scroll ? "shadow-lg bg-RepairingCenter-blue_500 " : "bg-transparent  "
         }  `}
       >
