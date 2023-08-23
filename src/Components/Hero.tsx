@@ -46,11 +46,11 @@ const Hero = React.forwardRef<HTMLDivElement>((_props, ref) => {
           className="flex items-center"
         >
           <Image
-            src="/Images/CoffeeMaker.png "
-            loading="eager"
-            width={450}
-            height={400}
+            src="/Images/Electronics.png"
+            width={600}
+            height={500}
             alt="Appliances"
+            loading="eager"
           />
         </motion.div>
       </div>

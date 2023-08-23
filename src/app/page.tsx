@@ -18,19 +18,19 @@ export default function Home() {
   const contactRef = useRef<HTMLDivElement>(null);
   return (
     <main lang="en">
-      {/* <Navbar
+      <Navbar
         aboutRef={aboutRef}
         servicesRef={servicesRef}
         contactRef={contactRef}
         homeRef={homeRef}
-      /> */}
+      />
       <Hero ref={homeRef} />
       <Callus />
       <About ref={aboutRef} />
       <Services ref={servicesRef} />
       <Gallery />
       <News />
-      <Testimonial />
+      {/* <Testimonial /> */}
       <Contact ref={contactRef} />
       <Liscense />
     </main>

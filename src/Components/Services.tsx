@@ -60,24 +60,21 @@ const Services = React.forwardRef<HTMLDivElement>((_props, ref) => {
             {Services.map((service, index) => (
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 1.01 }}
+                whileTap={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 key={index}
                 className="flex items-start justify-center gap-2"
               >
-                <div>
-                  <Image
-                    loading="lazy"
-                    src={service.image}
-                    width={50}
-                    height={50}
-                    alt={service.alt}
-                  />
-                </div>
+                <Image
+                  loading="lazy"
+                  src={service.image}
+                  width={50}
+                  height={50}
+                  alt={service.alt}
+                />
+
                 <div className="max-w-xs">
-                  <h2 className="text-base font-medium">
-                    {service.heading}
-                  </h2>
+                  <h2 className="text-base font-medium">{service.heading}</h2>
                   <p className="w-64 text-xs opacity-70">{service.details}</p>
                 </div>
               </motion.div>
