@@ -8,17 +8,13 @@ const Callus = () => {
   const { language } = useLanguage();
   const phoneNumber = "00968 92486614";
 
-  // Determine the marquee direction based on the RTL direction
-  const marqueeDirection = t("lang") === "ar" ? "right" : "left";
-
   return (
     <div className="flex px-5 py-2 border-b border-opacity-20">
       <div className={`flex flex-row max-w-screen-md mx-auto space-x-1`}>
         <div
-          className={`marquee ${
+          className={`flex items-center marquee ${
             language == "ar" && "flex-row-reverse"
-          } font-medium max-w-screen-md whitespace-nowrap overflow-hidden animate-marquee animation-duration-[20s] animation-timing-linear animation-infinite flex items-center `}
-          style={{ animationDirection: marqueeDirection }}
+          }  `}
         >
           <h1 className="flex items-center font-medium">
             <span className={`${language == "ar" ? "flex" : "hidden"}`}>:</span>

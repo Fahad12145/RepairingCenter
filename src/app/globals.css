@@ -22,9 +22,9 @@ body {
   font-family: "Poppins";
 }
 .marquee {
-  white-space: nowrap;
+  white-space: wrap;
   overflow: hidden;
-  animation: marquee 20s linear infinite;
+  animation: marquee 20s linear inherit;
 }
 
 @keyframes marquee {

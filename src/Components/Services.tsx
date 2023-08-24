@@ -50,7 +50,7 @@ const Services = React.forwardRef<HTMLDivElement>((_props, ref) => {
     <>
       <div ref={ref} className={`w-full pt-20 max-md:px-16 max-sm:px-5`}>
         <div className="max-w-screen-md mx-auto">
-          <h1 className="flex justify-center w-16 py-2 mx-auto text-2xl font-medium text-center border-b-4 lg:text-3xl border-b-RepairingCenter-red">
+          <h1 className="flex justify-center w-16 py-2 mx-auto text-2xl font-semibold text-center border-b-4 lg:text-3xl border-b-RepairingCenter-red">
             {t("ServicesHeading.15")}
           </h1>
           <div className="" />

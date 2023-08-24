@@ -41,7 +41,7 @@ const Gallery = () => {
   return (
     <div className="py-10 mx-20 max-sm:mx-5">
       <div className="max-w-screen-md mx-auto">
-        <h1 className="flex justify-center py-2 mx-auto my-5 text-2xl font-medium text-center border-b-4 w-36 lg:text-3xl border-b-RepairingCenter-green ">
+        <h1 className="flex justify-center py-2 mx-auto my-5 text-2xl font-semibold text-center border-b-4 w-36 lg:text-3xl border-b-RepairingCenter-green ">
           {t("Gallery.23")}
         </h1>
         <motion.div

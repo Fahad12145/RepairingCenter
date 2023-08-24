@@ -48,7 +48,7 @@ const Testimonial = () => {
           {" "}
           {t("Client Said.27")}{" "}
         </motion.h1>
-        <p className={` ${language == "ar" && "text-xl"} `}>
+        <p className={`opacity-70 ${language == "ar" && "text-xl "} `}>
           {t("TestimonialText.28")}
         </p>
         <motion.div

@@ -32,7 +32,7 @@ const About = React.forwardRef<HTMLDivElement>((_props, ref) => {
       <div className={`relative max-w-screen-md `}>
         <h1
           lang="en"
-          className="flex justify-center w-16 mx-auto my-2 text-2xl font-medium text-center border-b-4 lg:text-3xl border-b-RepairingCenter-blue_500 "
+          className="flex justify-center w-16 mx-auto my-2 text-2xl font-semibold text-center border-b-4 lg:text-3xl border-b-RepairingCenter-blue_500 "
         >
           {t("About.13")}
         </h1>

@@ -33,7 +33,7 @@ const News = () => {
       <div className="max-w-screen-md">
         <h1
           lang="en"
-          className="flex justify-center w-20 py-2 mx-auto my-2 text-2xl font-medium text-center border-b-4 lg:text-3xl border-b-RepairingCenter-orange"
+          className="flex justify-center w-20 py-2 mx-auto my-2 text-2xl font-semibold text-center border-b-4 lg:text-3xl border-b-RepairingCenter-orange"
         >
           {t("News.24")}
         </h1>
