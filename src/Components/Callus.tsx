@@ -16,7 +16,7 @@ const Callus = () => {
             language == "ar" && "flex-row-reverse"
           }  `}
         >
-          <h1 className="flex items-center font-medium">
+          <h1 className="flex items-center font-medium max-sm:text-xs">
             <span className={`${language == "ar" ? "flex" : "hidden"}`}>:</span>
             {t("Callus.12")}
             <span className={`${language == "ar" ? "hidden" : "flex"}`}>:</span>
@@ -28,7 +28,7 @@ const Callus = () => {
           >
             {phoneNumber}
           </Link>
-          <p className="ml-1">{t("NewsText1.43")}</p>
+          <p className="ml-1 max-sm:hidden">{t("NewsText1.43")}</p>
         </div>
       </div>
     </div>
