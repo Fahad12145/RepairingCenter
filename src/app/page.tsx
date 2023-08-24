@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { Suspense, useRef, useState } from "react";
 import About from "@/Components/About";
 import Callus from "@/Components/Callus";
 import Gallery from "@/Components/Gallery";
@@ -10,6 +10,8 @@ import Services from "@/Components/Services";
 import Contact from "@/Components/Footer";
 import Testimonial from "@/Components/Testimonial";
 import News from "@/Components/News";
+import "../i18next";
+// eslint-disable-next-line react-hooks/rules-of-hooks
 
 export default function Home() {
   const homeRef = useRef<HTMLDivElement>(null);
@@ -24,15 +26,23 @@ export default function Home() {
         contactRef={contactRef}
         homeRef={homeRef}
       />
-      <Hero ref={homeRef} />
-      <Callus />
-      <About ref={aboutRef} />
-      <Services ref={servicesRef} />
-      <Gallery />
-      <News />
-      <Testimonial />
-      <Contact ref={contactRef} />
-      <Liscense />
+      <Suspense
+        fallback={
+          <div>
+            <h1 className="text-center">Please wait...</h1>
+          </div>
+        }
+      >
+        <Hero ref={homeRef} />
+        <Callus />
+        <About ref={aboutRef} />
+        <Services ref={servicesRef} />
+        <Gallery />
+        <News />
+        <Testimonial />
+        <Contact ref={contactRef} />
+        <Liscense />
+      </Suspense>
     </main>
   );
 }

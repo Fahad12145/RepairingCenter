@@ -1,9 +1,13 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "@/Context/LanguageContext";
 
 // eslint-disable-next-line react/display-name
 const News = () => {
+  const { language } = useLanguage();
+  const { t } = useTranslation();
   const Images = [
     {
       image: "/Images/motor.png",
@@ -23,9 +27,9 @@ const News = () => {
       <div className="max-w-screen-md">
         <h1
           lang="en"
-          className="flex justify-center w-20 py-2 mx-auto my-2 text-2xl font-medium text-center border-b-4 border-b-RepairingCenter-orange"
+          className="flex justify-center w-20 py-2 mx-auto my-2 text-2xl font-medium text-center border-b-4 lg:text-3xl border-b-RepairingCenter-orange"
         >
-          News
+          {t("News.24")}
         </h1>
         <div lang="en" className="text-center ">
           <div className="flex flex-row items-center justify-between gap-10 mt-10 max-md:flex-col-reverse">
@@ -47,8 +51,8 @@ const News = () => {
                       className="shadow-2xl "
                       loading="lazy"
                       src={image.image}
-                      width={200}
-                      height={0}
+                      width={150}
+                      height={150}
                       alt="GalleryImages"
                     />
                   </motion.div>
@@ -56,10 +60,14 @@ const News = () => {
               })}
             </motion.div>
 
-            <p className="text-base hover:font-semibold">
-              We engage in the buying and selling of spare parts for household
-              appliances.{" "}
-            </p>
+            <motion.p
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 1.01 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              className={`text-base ${language == "ar" && "text-2xl"}`}
+            >
+              {t("NewsText.25")}
+            </motion.p>
           </div>
         </div>
       </div>
