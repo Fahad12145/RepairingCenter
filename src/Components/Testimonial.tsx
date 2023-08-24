@@ -29,18 +29,28 @@ const Testimonial = () => {
     <div
       className={` flex items-center justify-center ${
         language == "ar" && "  flex-row-reverse text-right"
-      } max-w-screen-md gap-10 py-10 mx-auto max-sm:px-10 max-largeTablet:flex-col max-sm:flex-col`}
+      } max-w-screen-md gap-10 py-20 mx-auto max-sm:px-10 max-largeTablet:flex-col max-sm:flex-col`}
     >
       <div className="max-w-sm mx-auto space-y-3">
         <h5
           className={`border-b-4 w-7 border-b-RepairingCenter-primary ${
-            language == "ar" && "flex ml-auto"
+            language == "ar" && "flex text-xl ml-auto"
           }`}
         >
           {t("Testimonial.26")}
         </h5>
-        <h1 className="text-4xl font-semibold "> {t("Client Said.27")} </h1>
-        <p className="text-xs">{t("TestimonialText.28")}</p>
+        <motion.h1
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 1.01 }}
+          transition={{ type: "spring", stiffness: 400, damping: 17 }}
+          className="text-4xl font-semibold "
+        >
+          {" "}
+          {t("Client Said.27")}{" "}
+        </motion.h1>
+        <p className={` ${language == "ar" && "text-xl"} `}>
+          {t("TestimonialText.28")}
+        </p>
         <motion.div
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 1.01 }}
@@ -53,7 +63,7 @@ const Testimonial = () => {
       </div>
       <div
         className={`relative ${
-          language == "ar" && "relative "
+          language == "ar" && "relative  overflow-x-auto"
         } flex space-x-5 overflow-x-auto w-80 max-sm:w-80  `}
       >
         {Reviews.map((review, index) => {
@@ -64,14 +74,14 @@ const Testimonial = () => {
             >
               <Image
                 className={`absolute  ${
-                  language == "ar" && "absolute  flex right-0 rotate-180"
+                  language == "ar" && "hidden"
                 }hover:rotate-12 rotate-3 `}
                 src="/Images/InvertedCommas.svg"
                 width={30}
                 height={30}
                 alt="InvertedComma"
               />
-              <p className="mt-10 text-sm font-medium text-RepairingCenter-blue_500">
+              <p className="mt-10 text-base font-medium text-RepairingCenter-blue_500">
                 {review.review}
               </p>{" "}
               <motion.div

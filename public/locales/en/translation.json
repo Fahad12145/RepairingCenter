@@ -110,19 +110,22 @@
   "ReviewClient4": {
     "37": "Waqas Ahmed"
   },
-  "Contact": {
+  "contact": {
     "38": "Contact"
   },
-  "Phone": {
+  "phone": {
     "39": "Phone"
   },
-  "Email": {
+  "email": {
     "40": "Email "
   },
-  "Postal": {
+  "postal": {
     "41": "Postal"
   },
-  "Locate US": {
+  "locateUs": {
     "42": "Locate Us"
+  },
+  "NewsText1": {
+    "43": "We are engaged in the buying and selling of spare parts."
   }
 }

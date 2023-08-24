@@ -27,12 +27,12 @@ const Contact = React.forwardRef<HTMLDivElement>((_props, ref) => {
             lang="en"
             className="py-1 mb-2 text-left border-b-4 w-7 border-b-RepairingCenter-blue "
           >
-            {t("Contact.38")}:
+            {t("contact.38")}:
           </h1>
           <div className="space-y-1">
             <div className="flex space-x-2">
               <MdCall size={20} />
-              <h4>{t("Phone.39")}:</h4>
+              <h4>{t("phone.39")}:</h4>
               <Link
                 className="cursor-pointer"
                 href={`tel:${phoneNumber}`}
@@ -43,21 +43,21 @@ const Contact = React.forwardRef<HTMLDivElement>((_props, ref) => {
             </div>
             <div className="flex space-x-2">
               <MdEmail size={20} />
-              <h4>{t("Email.40")}:</h4>
+              <h4>{t("email.40")}:</h4>
               <Link href={`mailto:${emailAddress}`} lang="en">
                 {emailAddress}
               </Link>
             </div>
             <div className="flex space-x-2">
               <MdLocationPin size={20} />
-              <h4>{t("Postal.41")}:</h4>
+              <h4>{t("postal.41")}:</h4>
               <span className="" lang="en">
                 {Postal}
               </span>
             </div>
             <div className="flex space-x-2">
               <IoMdLocate size={20} />
-              <h4>{t("Locate Us.42")}:</h4>
+              <h4>{t("locateUs.42")}:</h4>
               <Link
                 className="cursor-pointer"
                 href="https://www.google.com/maps/place/Seeb+Oman"

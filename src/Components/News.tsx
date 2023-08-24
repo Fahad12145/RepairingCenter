@@ -19,11 +19,17 @@ const News = () => {
       image: "/Images/spareparts.png",
     },
     {
-      image: "/Images/washingmachine.jpg",
+      image: "/Images/images.jpeg",
+    },
+    {
+      image: "/Images/sparepart.jpeg",
+    },
+    {
+      image: "/Images/automatic.jpeg",
     },
   ];
   return (
-    <div className="flex justify-center py-20 max-sm:px-5">
+    <div className="flex justify-center py-20 max-md:px-5">
       <div className="max-w-screen-md">
         <h1
           lang="en"

@@ -46,7 +46,7 @@ const About = React.forwardRef<HTMLDivElement>((_props, ref) => {
         >
           <Image
             className={`absolute hover:rotate-12 -left-10 -top-4 max-sm:-left-0 max-sm:-top-6  ${
-              language == "ar" && " absolute right-1  rotate-180"
+              language == "ar" && " absolute flex  right-1  "
             }`}
             src="/Images/InvertedCommas.svg"
             width={30}
