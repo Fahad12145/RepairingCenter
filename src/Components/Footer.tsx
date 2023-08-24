@@ -9,6 +9,7 @@ const Contact = React.forwardRef<HTMLDivElement>((_props, ref) => {
   const { t } = useTranslation();
   const emailAddress = "Ali.zamankahn123@outlook.com";
   const phoneNumber = "0096892486614";
+  const whatsAppNumber = "+96892486614";
   return (
     <div
       ref={ref}
@@ -38,7 +39,7 @@ const Contact = React.forwardRef<HTMLDivElement>((_props, ref) => {
             <h4>{t("phone.39")}:</h4>{" "}
             <Link
               className="cursor-pointer"
-              href={`https://wa.me/${phoneNumber}`}
+              href={`https://wa.me/${whatsAppNumber}`}
               target="_blank"
               rel="noopener noreferrer"
               lang="en"
