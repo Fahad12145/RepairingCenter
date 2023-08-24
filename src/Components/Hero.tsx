@@ -8,7 +8,7 @@ const ImageVariation = {
     y: 100,
   },
   onscreen: {
-    y: 50,
+    y: 30,
     rotate: 0,
   },
 };
@@ -47,7 +47,7 @@ const Hero = React.forwardRef<HTMLDivElement>((_props, ref) => {
           variants={TextVariation}
           initial="offscreen"
           whileInView="onscreen"
-          viewport={{ once: true, amount: 0.8 }}
+          // viewport={{ once: true, amount: 0.8 }}
           className="max-w-sm space-y-2 text-3xl font-bold text-RepairingCenter-secondary"
         >
           <span className={`w-3 text-5xl font-extrabold ${language=='ar'&&'text-5xl font-sans font-semibold'}  text-RepairingCenter-blue `}>

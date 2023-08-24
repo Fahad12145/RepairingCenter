@@ -1,10 +1,12 @@
 import Link from "next/link";
 import React from "react";
-import { MdCall, MdEmail, MdLocationPin } from "react-icons/md";
+import { MdCall, MdEmail, MdLocationPin, MdWhatsapp } from "react-icons/md";
 import { IoMdLocate } from "react-icons/io";
+import { useTranslation } from "react-i18next";
 
 // eslint-disable-next-line react/display-name
 const Contact = React.forwardRef<HTMLDivElement>((_props, ref) => {
+  const { t } = useTranslation();
   const emailAddress = "Ali.zamankahn123@outlook.com";
   const phoneNumber = "0096892486614";
   return (
@@ -26,6 +28,19 @@ const Contact = React.forwardRef<HTMLDivElement>((_props, ref) => {
             <Link
               className="cursor-pointer"
               href={`tel:${phoneNumber}`}
+              lang="en"
+            >
+              {phoneNumber}
+            </Link>
+          </div>
+          <div className="flex space-x-2">
+            <MdWhatsapp size={20} />
+            <h4>{t("phone.39")}:</h4>{" "}
+            <Link
+              className="cursor-pointer"
+              href={`https://wa.me/${phoneNumber}`}
+              target="_blank"
+              rel="noopener noreferrer"
               lang="en"
             >
               {phoneNumber}

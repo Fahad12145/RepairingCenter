@@ -81,11 +81,11 @@ const Navbar: React.FC<NavbarProps> = ({
   return (
     <div className="flex justify-center w-full my-2">
       <div
-        className={`fixed flex ${
+        className={`fixed flex justify-around py-2 bg-RepairingCenter-white top-0 z-50 w-full max-md:hidden space-x-5 ${
           language == "ar" && "flex-row-reverse"
-        } justify-around py-2 bg-RepairingCenter-white top-0 z-50 w-full max-md:hidden space-x-5 ${
+        } ${
           scroll
-            ? "shadow-lg bg-RepairingCenter-white bg-opacity-95"
+            ? "shadow-lg bg-RepairingCenter-white bg-opacity-100"
             : "bg-transparent mx-auto max-md:bg-opacity-50 "
         }   `}
       >
@@ -98,7 +98,9 @@ const Navbar: React.FC<NavbarProps> = ({
               <button
                 lang="en"
                 onClick={tab.onClick}
-                className={`px-5 py-2 font-medium font-arial hover:border-b-2 active:border-RepairingCenter-blue hover:text-RepairingCenter-blue ${language=='ar'&&'text-lg font-sans font-semibold'}`}
+                className={`px-5 py-2 font-medium font-arial hover:border-b-2 active:border-RepairingCenter-blue hover:text-RepairingCenter-blue ${
+                  language == "ar" && "text-lg font-sans font-semibold"
+                }`}
                 key={index}
               >
                 {tab.text}
