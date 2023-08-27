@@ -50,7 +50,11 @@ const Hero = React.forwardRef<HTMLDivElement>((_props, ref) => {
           // viewport={{ once: true, amount: 0.8 }}
           className="max-w-sm space-y-2 text-3xl font-bold text-RepairingCenter-secondary"
         >
-          <span className={`w-3 text-5xl font-extrabold ${language=='ar'&&'text-5xl font-sans font-semibold'}  text-RepairingCenter-blue `}>
+          <span
+            className={`w-3 text-5xl font-extrabold ${
+              language == "ar" && "text-5xl font-sans font-semibold"
+            }  text-RepairingCenter-blue `}
+          >
             {t("Welcome.5")}
           </span>
           <span className="mt-5 ml-2 text-2xl"> {t("To.8")}</span>

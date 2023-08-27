@@ -81,7 +81,7 @@ const Navbar: React.FC<NavbarProps> = ({
   return (
     <div className="flex justify-center w-full my-2">
       <div
-        className={`fixed flex justify-around py-2 bg-RepairingCenter-white top-0 z-50 w-full max-md:hidden space-x-5 ${
+        className={`fixed flex justify-around py-2 bg-RepairingCenter-white top-0 z-20 w-full max-md:hidden space-x-5 ${
           language == "ar" && "flex-row-reverse"
         } ${
           scroll
