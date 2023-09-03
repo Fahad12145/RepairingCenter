@@ -90,7 +90,7 @@ const Navbar: React.FC<NavbarProps> = ({
         }   `}
       >
         <Link href="/">
-          <Image src="/Images/Logo.png" width={60} height={60} alt="logo" />
+          <Image src="/Images/Logo.png" width={64} height={53} alt="logo" />
         </Link>
         <div className={`${language == "ar" && "flex-row-reverse"} flex `}>
           {Tabs.map((tab, index) => (

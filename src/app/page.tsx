@@ -1,18 +1,37 @@
 "use client";
 import React, { Suspense, useRef, useState } from "react";
-import About from "@/Components/About";
-import Callus from "@/Components/Callus";
-import Gallery from "@/Components/Gallery";
-import Hero from "@/Components/Hero";
 import Liscense from "@/Components/Liscense";
-import Navbar from "@/Components/Navbar";
-import Services from "@/Components/Services";
-import Contact from "@/Components/Footer";
-import Testimonial from "@/Components/Testimonial";
-import News from "@/Components/News";
 import "../i18next";
 // eslint-disable-next-line react-hooks/rules-of-hooks
+import dynamic from "next/dynamic";
 
+const Navbar = dynamic(() => import("../Components/Navbar"), {
+  loading: () => <p>Loading...</p>,
+});
+const Hero = dynamic(() => import("../Components/Hero"), {
+  loading: () => <p>Loading...</p>,
+});
+const Callus = dynamic(() => import("../Components/Callus"), {
+  loading: () => <p>Loading...</p>,
+});
+const About = dynamic(() => import("../Components/About"), {
+  loading: () => <p>Loading...</p>,
+});
+const Services = dynamic(() => import("../Components/Services"), {
+  loading: () => <p>Loading...</p>,
+});
+const Gallery = dynamic(() => import("../Components/Gallery"), {
+  loading: () => <p>Loading...</p>,
+});
+const News = dynamic(() => import("../Components/News"), {
+  loading: () => <p>Loading...</p>,
+});
+const Testimonial = dynamic(() => import("../Components/Testimonial"), {
+  loading: () => <p>Loading...</p>,
+});
+const Contact = dynamic(() => import("../Components/Footer"), {
+  loading: () => <p>Loading...</p>,
+});
 export default function Home() {
   const homeRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);

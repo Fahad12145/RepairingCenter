@@ -1,9 +1,8 @@
-"use client"
+"use client";
 import React from "react";
 import "./globals.css";
-import type { Metadata } from "next";
 import { LanguageProvider } from "@/Context/LanguageContext";
-
+import Head from "next/head";
 
 export default function RootLayout({
   children,
@@ -12,6 +11,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <title>Cool Repairing Center</title>
+      <meta name="description" content="Cool & Cool Repairing Services " />
       <body>
         <LanguageProvider>{children}</LanguageProvider>
       </body>

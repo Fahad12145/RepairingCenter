@@ -75,7 +75,7 @@ const Contact = React.forwardRef<HTMLDivElement>((_props, ref) => {
                 }`}
               >
                 {detail.icon}
-                <h4>{detail.name}</h4>
+                <h5>{detail.name}</h5>
                 {link ? (
                   <Link className="cursor-pointer" href={link}>
                     {detail.detail}
@@ -89,6 +89,7 @@ const Contact = React.forwardRef<HTMLDivElement>((_props, ref) => {
         </div>
 
         <iframe
+          title="Our Location "
           src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3656.33317540576!2d58.14074327533105!3d23.592381178778613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjPCsDM1JzMyLjYiTiA1OMKwMDgnMzYuMCJF!5e0!3m2!1sen!2s!4v1691922646742!5m2!1sen!2s"
           width="300"
           height="300"
