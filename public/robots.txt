@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.coolappliancesrepairingcenter.com/
+
+# Sitemaps
+Sitemap: https://www.coolappliancesrepairingcenter.com/sitemap.xml

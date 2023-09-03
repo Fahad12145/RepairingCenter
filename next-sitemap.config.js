@@ -1,5 +1,6 @@
-
+const siteUrl = 'https://www.coolappliancesrepairingcenter.com/'
 module.exports = {
-    siteUrl: process.env.SITE_URL || 'https://example.com',
-    generateRobotsTxt: true,
-  }
+  siteUrl: siteUrl,
+  generateRobotsTxt: true,
+  policies: [{ userAgent: "*" }, { userAgent: "*", allow: "/" }],
+}
