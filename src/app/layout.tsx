@@ -11,7 +11,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <title>Cool Repairing Center</title>
+      <title>Cool Appliances Repairing Center</title>
       <head>
         <script
           async
