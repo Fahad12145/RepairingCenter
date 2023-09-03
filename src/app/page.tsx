@@ -3,35 +3,16 @@ import React, { Suspense, useRef, useState } from "react";
 import Liscense from "@/Components/Liscense";
 import "../i18next";
 // eslint-disable-next-line react-hooks/rules-of-hooks
-import dynamic from "next/dynamic";
+import Navbar from "@/Components/Navbar";
+import Hero from "@/Components/Hero";
+import Callus from "@/Components/Callus";
+import About from "@/Components/About";
+import Services from "@/Components/Services";
+import Gallery from "@/Components/Gallery";
+import News from "@/Components/News";
+import Testimonial from "@/Components/Testimonial";
+import Contact from "@/Components/Footer";
 
-const Navbar = dynamic(() => import("../Components/Navbar"), {
-  loading: () => <p>Loading...</p>,
-});
-const Hero = dynamic(() => import("../Components/Hero"), {
-  loading: () => <p>Loading...</p>,
-});
-const Callus = dynamic(() => import("../Components/Callus"), {
-  loading: () => <p>Loading...</p>,
-});
-const About = dynamic(() => import("../Components/About"), {
-  loading: () => <p>Loading...</p>,
-});
-const Services = dynamic(() => import("../Components/Services"), {
-  loading: () => <p>Loading...</p>,
-});
-const Gallery = dynamic(() => import("../Components/Gallery"), {
-  loading: () => <p>Loading...</p>,
-});
-const News = dynamic(() => import("../Components/News"), {
-  loading: () => <p>Loading...</p>,
-});
-const Testimonial = dynamic(() => import("../Components/Testimonial"), {
-  loading: () => <p>Loading...</p>,
-});
-const Contact = dynamic(() => import("../Components/Footer"), {
-  loading: () => <p>Loading...</p>,
-});
 export default function Home() {
   const homeRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -58,6 +39,7 @@ export default function Home() {
         <Services ref={servicesRef} />
         <Gallery />
         <News />
+
         <Testimonial />
         <Contact ref={contactRef} />
         <Liscense />
