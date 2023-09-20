@@ -1,12 +1,11 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { IoMdClose } from "react-icons/io";
 import { BiGlobe } from "react-icons/bi";
 import { MdViewHeadline } from "react-icons/md";
 import { useTranslation } from "react-i18next";
-import { changeLanguage } from "i18next";
 import { useLanguage } from "@/Context/LanguageContext";
 
 interface NavbarProps {
@@ -41,7 +40,7 @@ const Navbar: React.FC<NavbarProps> = ({
         setScroll(false);
       }
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
