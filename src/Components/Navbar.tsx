@@ -128,7 +128,7 @@ const Navbar: React.FC<NavbarProps> = ({
         </div>
       </div>
       <div
-        className={`fixed top-0 py-3 flex items-center w-full px-5 justify-between bg-RepairingCenter-white   md:hidden ${
+        className={`fixed top-0 py-3 flex items-center w-full z-20 px-5 justify-between bg-RepairingCenter-white   md:hidden ${
           scroll ? "shadow-lg bg-RepairingCenter-blue_500 " : "bg-transparent  "
         }  `}
       >
