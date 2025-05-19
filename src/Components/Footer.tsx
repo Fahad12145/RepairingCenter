@@ -13,22 +13,22 @@ const Contact = React.forwardRef<HTMLDivElement>((_props, ref) => {
     {
       name: t("phone.39"),
       icon: <MdCall size={20} />,
-      detail: "0096892486614",
+      detail: "+96871751556",
     },
     {
       name: t("whatsApp.44"),
       icon: <MdWhatsapp size={20} />,
-      detail: "+96892486614",
+      detail: "+968992486614",
     },
     {
       name: t("email.40"),
       icon: <MdEmail size={20} />,
-      detail: "Ali.zamankahn123@outlook.com",
+      detail: "ali.zamankahn123@outlook.com",
     },
     {
       name: t("postal.41"),
       icon: <MdLocationPin size={20} />,
-      detail: "P.O box 532 PC 511 Al Khoud 6 sultnate of oman",
+      detail: "P.O box 532 PC 511 Al Khoud 6 Sultnate of Oman",
     },
     {
       name: t("locateUs.42"),
@@ -42,15 +42,13 @@ const Contact = React.forwardRef<HTMLDivElement>((_props, ref) => {
       className="flex flex-wrap justify-center w-full py-5 max-sm:gap-5 md:gap-40 text-RepairingCenter-content_bg bg-RepairingCenter-blue_500 max-sm:px-5 "
     >
       <div
-        className={` flex flex-row items-center justify-center space-y-5 gap-10 max-md:flex-col  ${
-          language == "ar" && "flex-row-reverse"
-        } `}
+        className={` flex flex-row items-center justify-center space-y-5 gap-10 max-md:flex-col  ${language == "ar" && "flex-row-reverse"
+          } `}
       >
         <div>
           <h1
-            className={`flex py-3 mb-5 text-left border-b-4 w-7 border-b-RepairingCenter-blue ${
-              language == "ar" && " ml-auto "
-            } `}
+            className={`flex py-3 mb-5 text-left border-b-4 w-7 border-b-RepairingCenter-blue ${language == "ar" && " ml-auto "
+              } `}
           >
             {t("contact.38")}
           </h1>
@@ -70,9 +68,8 @@ const Contact = React.forwardRef<HTMLDivElement>((_props, ref) => {
             return (
               <div
                 key={index}
-                className={`flex flex-row space-x-2 ${
-                  language == "ar" && "flex-row-reverse space-x-3 "
-                }`}
+                className={`flex flex-row space-x-2 ${language == "ar" && "flex-row-reverse space-x-3 "
+                  }`}
               >
                 {detail.icon}
                 <h5>{detail.name}</h5>

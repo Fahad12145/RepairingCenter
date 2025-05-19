@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
@@ -39,9 +40,8 @@ const Hero = React.forwardRef<HTMLDivElement>((_props, ref) => {
       className={`flex flex-row items-center justify-around w-full py-20 max-sm:px-5 bg-RepairingCenter-blue_500 md:px-10 `}
     >
       <div
-        className={`flex flex-row items-center max-w-screen-md gap-5 pt-10 max-largeTablet:flex-col  ${
-          language == "ar" && "flex-row-reverse"
-        } `}
+        className={`flex flex-row items-center max-w-screen-md gap-5 pt-10 max-largeTablet:flex-col  ${language == "ar" && "flex-row-reverse"
+          } `}
       >
         <motion.div
           variants={TextVariation}
@@ -51,9 +51,8 @@ const Hero = React.forwardRef<HTMLDivElement>((_props, ref) => {
           className="max-w-sm space-y-2 text-3xl font-bold text-RepairingCenter-secondary"
         >
           <span
-            className={`w-3 text-5xl font-extrabold ${
-              language == "ar" && "text-5xl font-sans font-semibold"
-            }  text-RepairingCenter-blue `}
+            className={`w-3 text-5xl font-extrabold ${language == "ar" && "text-5xl font-sans font-semibold"
+              }  text-RepairingCenter-blue `}
           >
             {t("Welcome.5")}
           </span>

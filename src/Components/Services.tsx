@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
@@ -63,9 +64,8 @@ const Services = React.forwardRef<HTMLDivElement>((_props, ref) => {
                 whileTap={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 key={index}
-                className={`flex items-start justify-center gap-2 ${
-                  language == "ar" && "flex-row-reverse text-right items-start"
-                }`}
+                className={`flex items-start justify-center gap-2 ${language == "ar" && "flex-row-reverse text-right items-start"
+                  }`}
               >
                 <Image
                   loading="lazy"

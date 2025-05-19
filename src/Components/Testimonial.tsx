@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -27,15 +28,13 @@ const Testimonial = () => {
   ];
   return (
     <div
-      className={` flex items-center justify-center ${
-        language == "ar" && "  flex-row-reverse text-right"
-      } max-w-screen-md gap-10 py-20 mx-auto max-sm:px-10 max-largeTablet:flex-col max-sm:flex-col`}
+      className={` flex items-center justify-center ${language == "ar" && "  flex-row-reverse text-right"
+        } max-w-screen-md gap-10 py-20 mx-auto max-sm:px-10 max-largeTablet:flex-col max-sm:flex-col`}
     >
       <div className="max-w-sm mx-auto space-y-3">
         <h5
-          className={`border-b-4 w-7 border-b-RepairingCenter-primary ${
-            language == "ar" && "flex text-xl ml-auto"
-          }`}
+          className={`border-b-4 w-7 border-b-RepairingCenter-primary ${language == "ar" && "flex text-xl ml-auto"
+            }`}
         >
           {t("Testimonial.26")}
         </h5>
@@ -62,9 +61,8 @@ const Testimonial = () => {
         </motion.div>
       </div>
       <div
-        className={`relative ${
-          language == "ar" && "relative  overflow-x-auto"
-        } flex space-x-5 overflow-x-auto w-80 max-sm:w-80  `}
+        className={`relative ${language == "ar" && "relative  overflow-x-auto"
+          } flex space-x-5 overflow-x-auto w-80 max-sm:w-80  `}
       >
         {Reviews.map((review, index) => {
           return (
@@ -73,9 +71,8 @@ const Testimonial = () => {
               className="min-w-full p-5 overflow-hidden bg-[#EEFAFF]"
             >
               <Image
-                className={`absolute  ${
-                  language == "ar" && "hidden"
-                }hover:rotate-12 rotate-3 `}
+                className={`absolute  ${language == "ar" && "hidden"
+                  }hover:rotate-12 rotate-3 `}
                 src="/Images/InvertedCommas.svg"
                 width={30}
                 height={30}
@@ -90,9 +87,8 @@ const Testimonial = () => {
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
                 <span
-                  className={`flex mt-5 text-xl font-semibold text-RepairingCenter-blue_500 ${
-                    language == "ar" && "flex justify-end"
-                  }`}
+                  className={`flex mt-5 text-xl font-semibold text-RepairingCenter-blue_500 ${language == "ar" && "flex justify-end"
+                    }`}
                 >
                   {review.name}
                 </span>

@@ -1,3 +1,4 @@
+'use client'
 import { useLanguage } from "@/Context/LanguageContext";
 import Link from "next/link";
 import React from "react";
@@ -12,9 +13,8 @@ const Callus = () => {
     <div className="flex px-5 py-2 border-b border-opacity-20">
       <div className={`flex flex-row max-w-screen-md mx-auto space-x-1`}>
         <div
-          className={`flex items-center marquee ${
-            language == "ar" && "flex-row-reverse"
-          }  `}
+          className={`flex items-center marquee ${language == "ar" && "flex-row-reverse"
+            }  `}
         >
           <h1 className="flex items-center font-medium max-sm:text-xs">
             <span className={`${language == "ar" ? "flex" : "hidden"}`}>:</span>

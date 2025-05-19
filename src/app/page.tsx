@@ -12,6 +12,7 @@ import Gallery from "@/Components/Gallery";
 import News from "@/Components/News";
 import Testimonial from "@/Components/Testimonial";
 import Contact from "@/Components/Footer";
+import Banner from "@/Components/newBanner";
 
 export default function Home() {
   const homeRef = useRef<HTMLDivElement>(null);
@@ -41,6 +42,7 @@ export default function Home() {
         <News />
 
         <Testimonial />
+        <Banner />
         <Contact ref={contactRef} />
         <Liscense />
       </Suspense>
