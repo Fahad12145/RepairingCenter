@@ -13,6 +13,7 @@ import News from "@/Components/News";
 import Testimonial from "@/Components/Testimonial";
 import Contact from "@/Components/Footer";
 import Banner from "@/Components/newBanner";
+import WhatsApp from "@/Components/WhatsApp";
 
 export default function Home() {
   const homeRef = useRef<HTMLDivElement>(null);
@@ -20,7 +21,7 @@ export default function Home() {
   const servicesRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
   return (
-    <main lang="en">
+    <main lang="en" className="relative">
       <Navbar
         aboutRef={aboutRef}
         servicesRef={servicesRef}
@@ -45,6 +46,7 @@ export default function Home() {
         <Banner />
         <Contact ref={contactRef} />
         <Liscense />
+        <WhatsApp />
       </Suspense>
     </main>
   );

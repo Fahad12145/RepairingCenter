@@ -39,7 +39,7 @@ const Contact = React.forwardRef<HTMLDivElement>((_props, ref) => {
   return (
     <div
       ref={ref}
-      className="flex flex-wrap justify-center w-full py-5 max-sm:gap-5 md:gap-40 text-RepairingCenter-content_bg bg-RepairingCenter-blue_500 max-sm:px-5 "
+      className="flex flex-wrap justify-center w-full py-5 max-sm:gap-5 md:gap-40 text-RepairingCenter-content_bg bg-RepairingCenter-blue_500 px-5 "
     >
       <div
         className={` flex flex-row items-center justify-center space-y-5 gap-10 max-md:flex-col  ${language == "ar" && "flex-row-reverse"

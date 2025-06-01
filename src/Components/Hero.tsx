@@ -58,7 +58,7 @@ const Hero = React.forwardRef<HTMLDivElement>((_props, ref) => {
           </span>
           <span className="mt-5 ml-2 text-2xl"> {t("To.8")}</span>
           <br />{" "}
-          <h2 className="m-0 text-6xl font-semibold text-center font-Poppins">
+          <h2 className="m-0 sm:text-6xl text-2xl font-semibold text-center font-Poppins">
             {t("Cool&Cool.9")}
           </h2>
           <h3 className="text-lg font-normal text-center">

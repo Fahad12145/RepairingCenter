@@ -55,7 +55,7 @@ const About = React.forwardRef<HTMLDivElement>((_props, ref) => {
   return (
     <>
       <div className="flex justify-center items-center">
-        <div className="grid grid-cols-2 gap-5 items-center max-w-screen-md">
+        <div className="grid sm:grid-cols-2 grid-cols-1 gap-5 items-center max-w-screen-md">
           <div
             ref={ref}
             className={`flex col-span-1 ${language == "ar" && "rtl-style"
