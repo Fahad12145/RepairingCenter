@@ -22,8 +22,6 @@ export default function Home() {
   const contactRef = useRef<HTMLDivElement>(null);
   return (
     <>
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCHBX5CW"
-        height="0" width="0" style={{ display: 'none', visibility: 'hidden' }}></iframe></noscript>
       <main lang="en" className="relative">
 
         <Navbar

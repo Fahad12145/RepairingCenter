@@ -18,6 +18,9 @@ export default function RootLayout({
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7535988651402009"
           crossOrigin="anonymous"
         ></script>
+
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCHBX5CW"
+          height="0" width="0" style={{ display: 'none', visibility: 'hidden' }}></iframe></noscript>
       </head>
       <meta name="description" content="Cool & Cool Repairing Services " />
       <body>
