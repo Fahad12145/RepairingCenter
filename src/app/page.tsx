@@ -21,33 +21,38 @@ export default function Home() {
   const servicesRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
   return (
-    <main lang="en" className="relative">
-      <Navbar
-        aboutRef={aboutRef}
-        servicesRef={servicesRef}
-        contactRef={contactRef}
-        homeRef={homeRef}
-      />
-      <Suspense
-        fallback={
-          <div>
-            <h1 className="text-center">Please wait...</h1>
-          </div>
-        }
-      >
-        <Hero ref={homeRef} />
-        <Callus />
-        <About ref={aboutRef} />
-        <Services ref={servicesRef} />
-        <Gallery />
-        <News />
+    <>
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCHBX5CW"
+        height="0" width="0" style={{ display: 'none', visibility: 'hidden' }}></iframe></noscript>
+      <main lang="en" className="relative">
 
-        <Testimonial />
-        <Banner />
-        <Contact ref={contactRef} />
-        <Liscense />
-        <WhatsApp />
-      </Suspense>
-    </main>
+        <Navbar
+          aboutRef={aboutRef}
+          servicesRef={servicesRef}
+          contactRef={contactRef}
+          homeRef={homeRef}
+        />
+        <Suspense
+          fallback={
+            <div>
+              <h1 className="text-center">Please wait...</h1>
+            </div>
+          }
+        >
+          <Hero ref={homeRef} />
+          <Callus />
+          <About ref={aboutRef} />
+          <Services ref={servicesRef} />
+          <Gallery />
+          <News />
+
+          <Testimonial />
+          <Banner />
+          <Contact ref={contactRef} />
+          <Liscense />
+          <WhatsApp />
+        </Suspense>
+      </main>
+    </>
   );
 }
